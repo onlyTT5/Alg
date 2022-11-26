@@ -1,15 +1,16 @@
 #include <stdio.h>
-int main()
-{
-    int a, b;
-    printf("请输入两个数使他们交换: ");
-    scanf("%d %d", &a, &b);
-
-    a = a + b;
-    b = a - b;
-    a = a - b;
-
-    printf("%d %d", a, b);
-
-    return 0;
+ 
+int main() {
+   int a, b;
+ 
+   a = 11;
+   b = 99;
+ 
+   printf("交换之前 - \n a = %d, b = %d \n\n", a, b);
+ 
+   a = a + b;  // ( 11 + 99 = 110)  此时 a 的变量为两数之和，b 未改变
+   b = a - b;  // ( 110 - 99 = 11)  
+   a = a - b;  // ( 110 - 11 = 99)
+ 
+   printf("交换后 - \n a = %d, b = %d \n", a, b);
 }
