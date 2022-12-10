@@ -1,11 +1,12 @@
 #include <stdio.h>
-void func(int i, int j)
+void f(int n);
+void func(int i, int j);
+int main()
 {
-    if (i > j)
-        return;
-    printf("%d * %d = %d\t", i, j, i * j);
-    func(i + 1, j);
+    f(9);
+    return 0;
 }
+
 void f(int n)
 {
     if (n == 1)
@@ -17,8 +18,14 @@ void f(int n)
         putchar('\n');
     }
 }
-int main()
+
+void func(int i, int j)
 {
-    f(9);
-    return 0;
+    if (i > j)
+        return;
+    else
+    {
+        printf("%d * %d = %d\t", i, j, i * j);
+        func(i + 1, j);
+    }
 }

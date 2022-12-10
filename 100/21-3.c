@@ -1,12 +1,11 @@
 #include <stdio.h>
+int addNumbers(int n);
 int main()
-{   
+{
     int num;
-    printf("请输入一个整数: ");
+    printf("请输入一个整型: ");
     scanf("%d", &num);
-    printf("%d\n", addNumbers(num));
-
-    return 0;
+    printf("%d", addNumbers(num));
 }
 
 int addNumbers(int n)
